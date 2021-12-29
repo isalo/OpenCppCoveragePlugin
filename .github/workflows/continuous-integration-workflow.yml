@@ -16,16 +16,16 @@ jobs:
         run: nuget restore CppCoveragePlugin.sln
 
       - name: Download OpenCppCoverage x64
-        run: Invoke-WebRequest -OutFile OpenCppCoverageSetup-x64-0.9.8.0.exe https://github.com/OpenCppCoverage/OpenCppCoverage/releases/download/release-0.9.8.0/OpenCppCoverageSetup-x64-0.9.8.0.exe
+        run: Invoke-WebRequest -OutFile OpenCppCoverageSetup-x64-0.9.9.0.exe https://github.com/OpenCppCoverage/OpenCppCoverage/releases/download/release-0.9.9.0/OpenCppCoverageSetup-x64-0.9.9.0.exe
 
       - name: Install OpenCppCoverage x64
-        run: ./OpenCppCoverageSetup-x64-0.9.8.0.exe /VERYSILENT /SUPPRESSMSGBOXES /DIR=VSPackage\OpenCppCoverage-x64
+        run: ./OpenCppCoverageSetup-x64-0.9.9.0.exe /VERYSILENT /SUPPRESSMSGBOXES /DIR=VSPackage\OpenCppCoverage-x64
 
       - name: Download OpenCppCoverage x86
-        run: Invoke-WebRequest -OutFile OpenCppCoverageSetup-x86-0.9.8.0.exe https://github.com/OpenCppCoverage/OpenCppCoverage/releases/download/release-0.9.8.0/OpenCppCoverageSetup-x86-0.9.8.0.exe
+        run: Invoke-WebRequest -OutFile OpenCppCoverageSetup-x86-0.9.9.0.exe https://github.com/OpenCppCoverage/OpenCppCoverage/releases/download/release-0.9.9.0/OpenCppCoverageSetup-x86-0.9.9.0.exe
 
       - name: Install OpenCppCoverage x86
-        run: ./OpenCppCoverageSetup-x86-0.9.8.0.exe /VERYSILENT /SUPPRESSMSGBOXES /DIR=VSPackage\OpenCppCoverage-x86
+        run: ./OpenCppCoverageSetup-x86-0.9.9.0.exe /VERYSILENT /SUPPRESSMSGBOXES /DIR=VSPackage\OpenCppCoverage-x86
 
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.0
